@@ -5,16 +5,16 @@
  *
  * main.c - application entry point
  * 
- * Author Howdy Pierce, howdy.pierce@colorado.edu
- *
- * Edited by: Harsh Beriwal, harsh.beriwal@colorado.edu
+ * Author: Howdy Pierce, howdy.pierce@colorado.edu
+ * 		   Harsh Beriwal, harsh.beriwal@colorado.edu
+ * Modified by: Harsh Beriwal
  *
  * IDE Used: MCUXpresso IDE v11.6.0 [Build 8187] [2022-07-13]
- *
  * Github Link: https://github.com/harshberiwal/PES_Assignment_6
  *
  * No leveraged code in this file.
  */
+
 #include "sysclock.h"
 #include "uart.h"
 #include "string.h"
@@ -29,9 +29,11 @@ int main(void)
 	char *input_str;
 	sysclock_init();
 	Init_UART0(BAUD_RATE);
+#ifdef DEBUG
 	int success = test_cbfifo();
 	if(!success)
-		printf("\n\rCircular buffer Tests Failed\n\r");
+	printf("\n\rCircular buffer Tests Failed\n\r");
+#endif
 	printf("\n\rWelcome to BreakfastSerial!\n\r");
 	while (1) {
 	  printf("? ");

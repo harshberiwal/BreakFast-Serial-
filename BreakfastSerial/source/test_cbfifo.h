@@ -3,8 +3,8 @@
  * The details of each function is given below.
  *
  * Author: Harsh Beriwal
- * Compiler Used: gcc (MinGW.org GCC-6.3.0-1) 6.3.0
- * IDE Used: Eclipse Version: 2022-06 (4.24.0)
+ * IDE Used: MCUXpresso IDE v11.6.0 [Build 8187] [2022-07-13]
+ * Github Link: https://github.com/harshberiwal/PES_Assignment_6
  *
  * No leveraged code or files
  *

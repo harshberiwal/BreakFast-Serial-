@@ -154,7 +154,10 @@ void handle_help(int argc, char *argv[])
 
 void handle_info(int argc, char *argv[])
 {
-	printf("\n\r%s built on %s at %s\n\rCommit %s\n\r", VERSION_TAG, VERSION_BUILD_MACHINE, VERSION_BUILD_DATE, VERSION_BUILD_INFO);
+#ifdef DEBUG
+	printf("\n\r%s built on %s at %s\n\rCommit %s\n\r", VERSION_TAG,
+			VERSION_BUILD_MACHINE, VERSION_BUILD_DATE, VERSION_BUILD_INFO);
+#endif
 }
 
 void handle_unknown(int argc, char *argv[])

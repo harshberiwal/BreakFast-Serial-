@@ -3,8 +3,8 @@
  * is given in test_cbfifo.h
  *
  * Author: Harsh Beriwal
- * Compiler Used: gcc (MinGW.org GCC-6.3.0-1) 6.3.0
- * IDE Used: Eclipse Version: 2022-06 (4.24.0)
+ * IDE Used: MCUXpresso IDE v11.6.0 [Build 8187] [2022-07-13]
+ * Github Link: https://github.com/harshberiwal/PES_Assignment_6
  *
  * The below line was taken from the Internet - https://blog.hubspot.com/sales/famous-quotes
  *
@@ -23,7 +23,6 @@
 #include "cbfifo.h"
 
 cbfifo_s Q1;
-
 
 static int total_checks = 0;
 static int test_failed = 0;
@@ -54,7 +53,6 @@ void test_cbfifo_compare_capacity(int val_1, int val_2)
 		}
 	}
 }
-
 
 void test_cbfifo_compare_return(int val_1, int val_2)
 {
@@ -143,7 +141,6 @@ int test_cbfifo()
 		total_checks++;
 	}
 	CHECK;
-
 
 	//*******************MAKING SURE IF THE LENGTH IS NULL**********************
 	test_cbfifo_compare_length(cbfifo_length(&Q1), 0);

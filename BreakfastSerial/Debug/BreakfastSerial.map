@@ -112,7 +112,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./source/cbfifo.o
  .data          0x00000000        0x0 ./source/cbfifo.o
  .bss           0x00000000        0x0 ./source/cbfifo.o
- .debug_macro   0x00000000      0xa9c ./source/cbfifo.o
  .group         0x00000000        0xc ./source/command_processor.o
  .group         0x00000000        0xc ./source/command_processor.o
  .group         0x00000000        0xc ./source/command_processor.o
@@ -637,7 +636,7 @@ END GROUP
                 0x20003000                __top_SRAM = 0x20003000
                 0x20003000                __top_RAM = 0x20003000
 
-.text           0x00000000     0x343c
+.text           0x00000000     0x3468
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(SORT_BY_ALIGNMENT(.isr_vector))
@@ -647,7 +646,7 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x343c LOADADDR (.data)
+                0x000000c0        0x4 LONG 0x3468 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x1ffff080 ADDR (.data)
                 0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
@@ -973,54 +972,54 @@ END GROUP
                                  0x1b (size before relaxing)
  *fill*         0x00003027        0x1 ff
  .rodata.handle_info.str1.4
-                0x00003028       0x6c ./source/command_processor.o
-                                 0x6d (size before relaxing)
+                0x00003028       0x95 ./source/command_processor.o
+ *fill*         0x000030bd        0x3 ff
  .rodata.handle_unknown.str1.4
-                0x00003094       0x17 ./source/command_processor.o
- *fill*         0x000030ab        0x1 ff
+                0x000030c0       0x17 ./source/command_processor.o
+ *fill*         0x000030d7        0x1 ff
  .rodata.hexdump.str1.4
-                0x000030ac       0x12 ./source/hexdump.o
+                0x000030d8       0x12 ./source/hexdump.o
                                  0x16 (size before relaxing)
- *fill*         0x000030be        0x2 ff
+ *fill*         0x000030ea        0x2 ff
  .rodata.main.str1.4
-                0x000030c0       0x47 ./source/main.o
- *fill*         0x00003107        0x1 ff
+                0x000030ec       0x47 ./source/main.o
+ *fill*         0x00003133        0x1 ff
  .rodata.test_cbfifo.str1.4
-                0x00003108      0x15c ./source/test_cbfifo.o
+                0x00003134      0x15c ./source/test_cbfifo.o
  .rodata.__num_Ciob_streams
-                0x00003264        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_nohost_nf.a(__ciob.o)
-                0x00003264                __num_Ciob_streams
+                0x00003290        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_nohost_nf.a(__ciob.o)
+                0x00003290                __num_Ciob_streams
  .rodata._Csys_alloc.str1.1
-                0x00003268       0x18 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(alloc.o)
+                0x00003294       0x18 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(alloc.o)
  .rodata._initio.str1.1
-                0x00003280        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(initio.o)
+                0x000032ac        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x00003284       0x37 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(printf.o)
+                0x000032b0       0x37 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
  .rodata.__ctype
-                0x000032bb      0x180 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(ctype.o)
-                0x000032bb                __ctype
-                0x0000343c                . = ALIGN (0x4)
- *fill*         0x0000343b        0x1 ff
-                0x0000343c                _etext = .
+                0x000032e7      0x180 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(ctype.o)
+                0x000032e7                __ctype
+                0x00003468                . = ALIGN (0x4)
+ *fill*         0x00003467        0x1 ff
+                0x00003468                _etext = .
 
-.glue_7         0x0000343c        0x0
- .glue_7        0x0000343c        0x0 linker stubs
+.glue_7         0x00003468        0x0
+ .glue_7        0x00003468        0x0 linker stubs
 
-.glue_7t        0x0000343c        0x0
- .glue_7t       0x0000343c        0x0 linker stubs
+.glue_7t        0x00003468        0x0
+ .glue_7t       0x00003468        0x0 linker stubs
 
-.vfp11_veneer   0x0000343c        0x0
- .vfp11_veneer  0x0000343c        0x0 linker stubs
+.vfp11_veneer   0x00003468        0x0
+ .vfp11_veneer  0x00003468        0x0 linker stubs
 
-.v4_bx          0x0000343c        0x0
- .v4_bx         0x0000343c        0x0 linker stubs
+.v4_bx          0x00003468        0x0
+ .v4_bx         0x00003468        0x0 linker stubs
 
-.iplt           0x0000343c        0x0
- .iplt          0x0000343c        0x0 ./startup/startup_mkl25z4.o
+.iplt           0x00003468        0x0
+ .iplt          0x00003468        0x0 ./startup/startup_mkl25z4.o
 
-.rel.dyn        0x0000343c        0x0
- .rel.iplt      0x0000343c        0x0 ./startup/startup_mkl25z4.o
+.rel.dyn        0x00003468        0x0
+ .rel.iplt      0x00003468        0x0 ./startup/startup_mkl25z4.o
 
 .m_usb_data
  *(SORT_BY_ALIGNMENT(m_usb_bdt))
@@ -1038,7 +1037,7 @@ END GROUP
                 0x1ffff080                . = ALIGN (0x4)
                 0x1ffff080                _end_uninit_RESERVED = .
 
-.data           0x1ffff080        0x0 load address 0x0000343c
+.data           0x1ffff080        0x0 load address 0x00003468
  FILL mask 0xff
                 0x1ffff080                _data = .
                 [!provide]                PROVIDE (__start_data_RAM = .)
@@ -1054,7 +1053,7 @@ END GROUP
                 [!provide]                PROVIDE (__end_data_RAM = .)
                 [!provide]                PROVIDE (__end_data_SRAM = .)
 
-.igot.plt       0x1ffff080        0x0 load address 0x0000343c
+.igot.plt       0x1ffff080        0x0 load address 0x00003468
  .igot.plt      0x1ffff080        0x0 ./startup/startup_mkl25z4.o
 
 .bss            0x1ffff080      0x4f0
@@ -1107,10 +1106,10 @@ END GROUP
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
 
-.ARM.exidx      0x0000343c        0x0
-                0x0000343c                __exidx_start = .
+.ARM.exidx      0x00003468        0x0
+                0x00003468                __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(.gnu.linkonce.armexidx.*))
-                0x0000343c                __exidx_end = .
+                0x00003468                __exidx_end = .
                 0x00000400                _HeapSize = 0x400
 
 .heap           0x1ffff570      0x400
@@ -1131,8 +1130,8 @@ END GROUP
                 0x20002c00                . = ALIGN (0x4)
                 0x20003000                _vStackTop = (. + _StackSize)
                 0x00000000                _image_start = LOADADDR (.text)
-                0x0000343c                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0000343c                _image_size = (_image_end - _image_start)
+                0x00003468                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00003468                _image_size = (_image_end - _image_start)
 OUTPUT(BreakfastSerial.axf elf32-littlearm)
 LOAD linker stubs
 
@@ -1198,78 +1197,79 @@ LOAD linker stubs
  .debug_ranges  0x00000240       0x40 ./source/uart.o
  .debug_ranges  0x00000280       0x18 ./CMSIS/system_MKL25Z4.o
 
-.debug_macro    0x00000000     0xe1f1
+.debug_macro    0x00000000     0xec8d
  .debug_macro   0x00000000       0x29 ./startup/startup_mkl25z4.o
  .debug_macro   0x00000029      0xa9c ./startup/startup_mkl25z4.o
  .debug_macro   0x00000ac5       0xf0 ./source/cbfifo.o
- .debug_macro   0x00000bb5       0x10 ./source/cbfifo.o
- .debug_macro   0x00000bc5      0x12e ./source/cbfifo.o
- .debug_macro   0x00000cf3       0x28 ./source/cbfifo.o
- .debug_macro   0x00000d1b       0xd2 ./source/cbfifo.o
- .debug_macro   0x00000ded       0x3f ./source/cbfifo.o
- .debug_macro   0x00000e2c      0x5b3 ./source/cbfifo.o
- .debug_macro   0x000013df       0x34 ./source/cbfifo.o
- .debug_macro   0x00001413       0x26 ./source/cbfifo.o
- .debug_macro   0x00001439      0x329 ./source/cbfifo.o
- .debug_macro   0x00001762       0x30 ./source/cbfifo.o
- .debug_macro   0x00001792     0x51e2 ./source/cbfifo.o
- .debug_macro   0x00006974      0x128 ./source/command_processor.o
- .debug_macro   0x00006a9c      0xa9c ./source/command_processor.o
- .debug_macro   0x00007538       0x3a ./source/command_processor.o
- .debug_macro   0x00007572       0x22 ./source/command_processor.o
- .debug_macro   0x00007594       0xf2 ./source/hexdump.o
- .debug_macro   0x00007686      0x110 ./source/main.o
- .debug_macro   0x00007796       0x10 ./source/main.o
- .debug_macro   0x000077a6       0x1c ./source/main.o
- .debug_macro   0x000077c2       0x2f ./source/mtb.o
- .debug_macro   0x000077f1       0x82 ./source/mtb.o
- .debug_macro   0x00007873       0x10 ./source/mtb.o
- .debug_macro   0x00007883       0x11 ./source/semihost_hardfault.o
- .debug_macro   0x00007894       0x91 ./source/sysclock.o
- .debug_macro   0x00007925       0x3f ./source/sysclock.o
- .debug_macro   0x00007964     0x51e2 ./source/sysclock.o
- .debug_macro   0x0000cb46       0xe3 ./source/test_cbfifo.o
- .debug_macro   0x0000cc29       0xd8 ./source/test_cbfifo.o
- .debug_macro   0x0000cd01       0xfa ./source/uart.o
- .debug_macro   0x0000cdfb       0x94 ./CMSIS/system_MKL25Z4.o
- .debug_macro   0x0000ce8f       0x10 ./CMSIS/system_MKL25Z4.o
- .debug_macro   0x0000ce9f     0x1352 ./CMSIS/system_MKL25Z4.o
+ .debug_macro   0x00000bb5      0xa9c ./source/cbfifo.o
+ .debug_macro   0x00001651       0x10 ./source/cbfifo.o
+ .debug_macro   0x00001661      0x12e ./source/cbfifo.o
+ .debug_macro   0x0000178f       0x28 ./source/cbfifo.o
+ .debug_macro   0x000017b7       0xd2 ./source/cbfifo.o
+ .debug_macro   0x00001889       0x3f ./source/cbfifo.o
+ .debug_macro   0x000018c8      0x5b3 ./source/cbfifo.o
+ .debug_macro   0x00001e7b       0x34 ./source/cbfifo.o
+ .debug_macro   0x00001eaf       0x26 ./source/cbfifo.o
+ .debug_macro   0x00001ed5      0x329 ./source/cbfifo.o
+ .debug_macro   0x000021fe       0x30 ./source/cbfifo.o
+ .debug_macro   0x0000222e     0x51e2 ./source/cbfifo.o
+ .debug_macro   0x00007410      0x128 ./source/command_processor.o
+ .debug_macro   0x00007538      0xa9c ./source/command_processor.o
+ .debug_macro   0x00007fd4       0x3a ./source/command_processor.o
+ .debug_macro   0x0000800e       0x22 ./source/command_processor.o
+ .debug_macro   0x00008030       0xf2 ./source/hexdump.o
+ .debug_macro   0x00008122      0x110 ./source/main.o
+ .debug_macro   0x00008232       0x10 ./source/main.o
+ .debug_macro   0x00008242       0x1c ./source/main.o
+ .debug_macro   0x0000825e       0x2f ./source/mtb.o
+ .debug_macro   0x0000828d       0x82 ./source/mtb.o
+ .debug_macro   0x0000830f       0x10 ./source/mtb.o
+ .debug_macro   0x0000831f       0x11 ./source/semihost_hardfault.o
+ .debug_macro   0x00008330       0x91 ./source/sysclock.o
+ .debug_macro   0x000083c1       0x3f ./source/sysclock.o
+ .debug_macro   0x00008400     0x51e2 ./source/sysclock.o
+ .debug_macro   0x0000d5e2       0xe3 ./source/test_cbfifo.o
+ .debug_macro   0x0000d6c5       0xd8 ./source/test_cbfifo.o
+ .debug_macro   0x0000d79d       0xfa ./source/uart.o
+ .debug_macro   0x0000d897       0x94 ./CMSIS/system_MKL25Z4.o
+ .debug_macro   0x0000d92b       0x10 ./CMSIS/system_MKL25Z4.o
+ .debug_macro   0x0000d93b     0x1352 ./CMSIS/system_MKL25Z4.o
 
-.debug_line     0x00000000     0x1f45
+.debug_line     0x00000000     0x1f43
  .debug_line    0x00000000      0x1ed ./startup/startup_mkl25z4.o
  .debug_line    0x000001ed      0x394 ./source/cbfifo.o
  .debug_line    0x00000581      0x4c8 ./source/command_processor.o
  .debug_line    0x00000a49      0x2c9 ./source/hexdump.o
- .debug_line    0x00000d12      0x2d0 ./source/main.o
- .debug_line    0x00000fe2       0xd1 ./source/mtb.o
- .debug_line    0x000010b3       0x59 ./source/semihost_hardfault.o
- .debug_line    0x0000110c      0x23d ./source/sysclock.o
- .debug_line    0x00001349      0x472 ./source/test_cbfifo.o
- .debug_line    0x000017bb      0x457 ./source/uart.o
- .debug_line    0x00001c12      0x333 ./CMSIS/system_MKL25Z4.o
+ .debug_line    0x00000d12      0x2ce ./source/main.o
+ .debug_line    0x00000fe0       0xd1 ./source/mtb.o
+ .debug_line    0x000010b1       0x59 ./source/semihost_hardfault.o
+ .debug_line    0x0000110a      0x23d ./source/sysclock.o
+ .debug_line    0x00001347      0x472 ./source/test_cbfifo.o
+ .debug_line    0x000017b9      0x457 ./source/uart.o
+ .debug_line    0x00001c10      0x333 ./CMSIS/system_MKL25Z4.o
 
-.debug_str      0x00000000    0x31003
+.debug_str      0x00000000    0x31068
  .debug_str     0x00000000     0x312e ./startup/startup_mkl25z4.o
                                0x3163 (size before relaxing)
- .debug_str     0x0000312e    0x2625a ./source/cbfifo.o
-                              0x291b1 (size before relaxing)
- .debug_str     0x00029388      0x26d ./source/command_processor.o
-                              0x292d8 (size before relaxing)
- .debug_str     0x000295f5       0x82 ./source/hexdump.o
+ .debug_str     0x0000312e    0x262bf ./source/cbfifo.o
+                              0x291d9 (size before relaxing)
+ .debug_str     0x000293ed      0x26d ./source/command_processor.o
+                              0x29300 (size before relaxing)
+ .debug_str     0x0002965a       0x82 ./source/hexdump.o
                               0x29116 (size before relaxing)
- .debug_str     0x00029677       0xae ./source/main.o
-                              0x2915b (size before relaxing)
- .debug_str     0x00029725      0x532 ./source/mtb.o
+ .debug_str     0x000296dc       0xae ./source/main.o
+                              0x29183 (size before relaxing)
+ .debug_str     0x0002978a      0x532 ./source/mtb.o
                                0x3283 (size before relaxing)
- .debug_str     0x00029c57       0x1f ./source/semihost_hardfault.o
+ .debug_str     0x00029cbc       0x1f ./source/semihost_hardfault.o
                                0x2d70 (size before relaxing)
- .debug_str     0x00029c76       0x4e ./source/sysclock.o
+ .debug_str     0x00029cdb       0x4e ./source/sysclock.o
                               0x28d07 (size before relaxing)
- .debug_str     0x00029cc4       0xe9 ./source/test_cbfifo.o
-                              0x291d4 (size before relaxing)
- .debug_str     0x00029dad      0x42d ./source/uart.o
+ .debug_str     0x00029d29       0xe9 ./source/test_cbfifo.o
+                              0x291fc (size before relaxing)
+ .debug_str     0x00029e12      0x42d ./source/uart.o
                               0x29529 (size before relaxing)
- .debug_str     0x0002a1da     0x6e29 ./CMSIS/system_MKL25Z4.o
+ .debug_str     0x0002a23f     0x6e29 ./CMSIS/system_MKL25Z4.o
                               0x2fbb2 (size before relaxing)
 
 .comment        0x00000000       0x49

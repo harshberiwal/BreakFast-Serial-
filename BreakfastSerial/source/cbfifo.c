@@ -53,8 +53,6 @@ int cbfifo_enqueue(char nbyte, cbfifo_s* buf)
 	}
 }
 
-
-
 int cbfifo_dequeue(cbfifo_s *buf)
 {
 	uint32_t masking_state;
@@ -74,7 +72,6 @@ int cbfifo_dequeue(cbfifo_s *buf)
 	}
 	return dequeued_byte;
 }
-
 
 size_t cbfifo_length(cbfifo_s * buf)
 {

@@ -4,4 +4,4 @@
 ../source/command_processor.c:122:6:handle_dump	24	static
 ../source/command_processor.c:142:6:handle_help	24	static
 ../source/command_processor.c:155:6:handle_info	32	static
-../source/command_processor.c:160:6:handle_unknown	16	static
+../source/command_processor.c:163:6:handle_unknown	16	static
