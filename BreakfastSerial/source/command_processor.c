@@ -9,7 +9,7 @@
  *
  * Github Link: https://github.com/harshberiwal/PES_Assignment_6
  *
- * No leveraged code or files
+ * Part of Process Command function was taken from the Dean's book and lecture slides.
  */
 
 #include "command_processor.h"
@@ -154,7 +154,7 @@ void handle_help(int argc, char *argv[])
 
 void handle_info(int argc, char *argv[])
 {
-	printf("%s %s \n\r%s %s\n\r", VERSION_BUILD_DATE, VERSION_BUILD_MACHINE, VERSION_TAG, VERSION_BUILD_INFO);
+	printf("\n\r%s built on %s at %s\n\rCommit %s\n\r", VERSION_TAG, VERSION_BUILD_MACHINE, VERSION_BUILD_DATE, VERSION_BUILD_INFO);
 }
 
 void handle_unknown(int argc, char *argv[])

@@ -30,9 +30,7 @@ int main(void)
 	sysclock_init();
 	Init_UART0(BAUD_RATE);
 	int success = test_cbfifo();
-	if(success)
-		printf("\n\rAll Circular Buffer Test Passed\n\r");
-	else
+	if(!success)
 		printf("\n\rCircular buffer Tests Failed\n\r");
 	printf("\n\rWelcome to BreakfastSerial!\n\r");
 	while (1) {

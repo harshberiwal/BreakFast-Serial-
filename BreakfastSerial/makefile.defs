@@ -13,7 +13,3 @@ GEN_OPTS__FLAG += VERSION_TAG="\"$(VERSION_TAG)\"" \
              -DVERSION_BUILD_INFO="\"$(BUILD_INFO)\""\
              -DVERSION_BUILD_MACHINE="\"$(BUILD_MACHINE)\""\
              -DVERSION_BUILD_DATE="\"$(BUILD_DATE)\""
-             
-
-
-

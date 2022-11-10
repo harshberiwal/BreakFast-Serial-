@@ -125,7 +125,7 @@ int test_cbfifo()
 	for(int i=0;i<SIZE; i++)
 	{
 		test_cbfifo_compare_return(cbfifo_enqueue(str[i], &Q1), 1);
-		test_cbfifo_compare_length(cbfifo_length(&Q1), i);
+		test_cbfifo_compare_length(cbfifo_length(&Q1), i+1);
 		total_checks++;
 	}
 	CHECK;
@@ -135,11 +135,11 @@ int test_cbfifo()
 	test_cbfifo_compare_length(cbfifo_length(&Q1), SIZE);
 	CHECK;
 
-/*	//******************DEQUEUING ALL AND CHECKING THE BYTES********************
+	//******************DEQUEUING ALL AND CHECKING THE BYTES********************
 	for(int i=0;i<SIZE; i++)
 	{
 		test_cbfifo_dequeued(cbfifo_dequeue(&Q1), str[i]);
-		test_cbfifo_compare_length(cbfifo_length(&Q1), i);
+		test_cbfifo_compare_length(cbfifo_length(&Q1),SIZE-i-1);
 		total_checks++;
 	}
 	CHECK;
@@ -153,11 +153,10 @@ int test_cbfifo()
 	//*********************DEQUEUING WHEN THE BUFFER IS EMPTY*******************
 	test_cbfifo_dequeued(cbfifo_dequeue(&Q1), 0);
 	total_checks++;
-	CHECK;*/
+	CHECK;
 
-	printf("\n\rTotal Checks Passed for CBFIFO: %d",checks_passed);
 	printf("\n\rTotal Tests Passed for CBFIFO: %d/%d",total_checks,total_checks);
-	printf("\n\rAll Tests cases passed for CBFIFO.C");
+	printf("\n\rAll Tests cases passed for CBFIFO.C\n\r");
 	return 1;
 }
 
