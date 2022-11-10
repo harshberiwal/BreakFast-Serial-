@@ -1,0 +1,6 @@
+../source/cbfifo.c:24:6:cbfifo_init	24	static
+../source/cbfifo.c:34:5:cbfifo_enqueue	32	static
+../source/cbfifo.c:58:5:cbfifo_dequeue	32	static
+../source/cbfifo.c:79:8:cbfifo_length	16	static
+../source/cbfifo.c:84:5:cbfifo_full	16	static
+../source/cbfifo.c:89:5:cbfifo_empty	16	static

@@ -1,0 +1,6 @@
+../source/test_cbfifo.c:34:6:test_cbfifo_compare_length	16	static
+../source/test_cbfifo.c:46:6:test_cbfifo_compare_capacity	16	static
+../source/test_cbfifo.c:59:6:test_cbfifo_compare_return	16	static
+../source/test_cbfifo.c:71:6:test_cbfifo_dequeued	16	static
+../source/test_cbfifo.c:83:6:test_dequeued_elements	16	static
+../source/test_cbfifo.c:95:5:test_cbfifo	296	static

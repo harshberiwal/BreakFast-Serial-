@@ -1,0 +1,19 @@
+BUILD_DATE := $(shell date -u +"%d/%m/%Y, %H:%M")
+BUILD_MACHINE := $(shell whoami)@$(shell hostname)
+
+VERSION_TAG :=$(strip $(word 1, $(version)))
+BUILD_INFO := $(COMMIT)$(BUILD_INFO_COMMITS)$(BUILD_INFO_DIRTY)
+
+$(info Build Time: $(BUILD_DATE))
+$(info Build Version: $(VERSION_TAG))
+$(info Build Info: $(BUILD_INFO))
+$(info Build Machine: $(BUILD_MACHINE))
+
+GEN_OPTS__FLAG += VERSION_TAG="\"$(VERSION_TAG)\"" \
+             -DVERSION_BUILD_INFO="\"$(BUILD_INFO)\""\
+             -DVERSION_BUILD_MACHINE="\"$(BUILD_MACHINE)\""\
+             -DVERSION_BUILD_DATE="\"$(BUILD_DATE)\""
+             
+
+
+
