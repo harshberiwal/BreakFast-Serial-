@@ -17,12 +17,12 @@
  
  Few Quotes were taken from - https://blog.hubspot.com/sales/famous-quotes as part of cbfifo.c testing in test_cbfifo.c file. 
  
- The files includes a state machine for tokenizations of the accumulated line in the serial. Following are the important programs given in the files. 
+ The files includes a state machine for tokenizations of the accumulated line in the serial. Following are the important functions given in the files. 
  
- 1)char * accumulate_line() - The Accumulated line is seperated by \r\n. The accumulate line function includes a Null chracter after \r is detected. 
+ 1) char * accumulate_line() - The Accumulated line is seperated by \r\n. The accumulate line function includes a Null chracter after \r is detected. 
   
 
- 2)void Process_command(char * input_str) -  This function takes the accumulated line and adds a null character at the blank space after every command. 
+ 2) void Process_command(char * input_str) -  This function takes the accumulated line and adds a null character at the blank space after every command. 
   This helps us differentiate between the command and its paramters (arguments). This Function also makes a pointer points to the first
   character of the command. The function after all lexical analysis calls the dispatch function which is created using a state machine table. 
   
