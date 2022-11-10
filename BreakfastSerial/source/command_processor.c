@@ -154,7 +154,7 @@ void handle_help(int argc, char *argv[])
 
 void handle_info(int argc, char *argv[])
 {
-	printf("%s %s %s (%s)\n", VERSION_BUILD_DATE, VERSION_BUILD_MACHINE, VERSION_TAG, VERSION_BUILD);
+	printf("%s %s \n\r%s %s\n\r", VERSION_BUILD_DATE, VERSION_BUILD_MACHINE, VERSION_TAG, VERSION_BUILD_INFO);
 }
 
 void handle_unknown(int argc, char *argv[])

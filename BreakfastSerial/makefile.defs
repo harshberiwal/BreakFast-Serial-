@@ -1,8 +1,8 @@
 BUILD_DATE := $(shell date -u +"%d/%m/%Y, %H:%M")
 BUILD_MACHINE := $(shell whoami)@$(shell hostname)
 
-VERSION_TAG :=$(strip $(word 1, $(version)))
-BUILD_INFO := $(COMMIT)$(BUILD_INFO_COMMITS)$(BUILD_INFO_DIRTY)
+VERSION_TAG :=$(shell git tag)
+BUILD_INFO := $(shell git log --pretty=format:"%H" HEAD -1)
 
 $(info Build Time: $(BUILD_DATE))
 $(info Build Version: $(VERSION_TAG))
